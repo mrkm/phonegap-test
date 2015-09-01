@@ -34,6 +34,17 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+
+	alert("PhoneGap is ready");
+        // check plugin
+        console.log("PhoneGap is ready");
+        window.HelloWorld.say(
+			      function(result) { alert( "success: " + result ); },
+			      function(error) { alert( "error: " + error ); }
+			      );
+        alert("plugin loaded??");
+        console.log("plugin loaded?");
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
